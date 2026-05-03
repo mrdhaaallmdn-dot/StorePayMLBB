@@ -1,0 +1,6 @@
+mlbb-paystore/
+├── index.html
+├── style.css
+├── script.js
+└── assets/
+    └── diamonds.png
