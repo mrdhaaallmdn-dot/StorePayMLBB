@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB PayStore - Top Up Diamond Murah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-gem"></i>
+                <h1>MLBB PayStore</h1>
+            </div>
+            <div class="user-info">
+                <span id="balance">Saldo: Rp 0</span>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Top Up Diamond MLBB</h2>
+                <p>Harga Termurah & Instant</p>
+                <div class="game-logo">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Mobile Legends: Bang Bang</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Up Packages -->
+        <section class="packages">
+            <h3>Pilih Paket Diamond</h3>
+            <div class="package-grid" id="packageGrid">
+                <!-- Packages akan di-generate oleh JS -->
+            </div>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="payment-methods" id="paymentSection" style="display: none;">
+            <h3>Metode Pembayaran</h3>
+            <div class="payment-grid">
+                <div class="payment-method" data-method="gopay">
+                    <i class="fab fa-get-pocket"></i>
+                    <span>GoPay</span>
+                </div>
+                <div class="payment-method" data-method="dana">
+                    <i class="fas fa-wallet"></i>
+                    <span>DANA</span>
+                </div>
+                <div class="payment-method" data-method="ovo">
+                    <i class="fas fa-credit-card"></i>
+                    <span>OVO</span>
+                </div>
+                <div class="payment-method" data-method="bank">
+                    <i class="fas fa-university"></i>
+                    <span>Transfer Bank</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Summary -->
+        <section class="order-summary" id="orderSummary" style="display: none;">
+            <h3>Ringkasan Pesanan</h3>
+            <div class="summary-content">
+                <div class="summary-item">
+                    <span>Paket Diamond</span>
+                    <span id="selectedPackage">-</span>
+                </div>
+                <div class="summary-item">
+                    <span>ID Akun ML</span>
+                    <input type="text" id="userId" placeholder="Masukkan ID Akun ML">
+                </div>
+                <div class="summary-item total">
+                    <span>Total Harga</span>
+                    <span id="totalPrice">Rp 0</span>
+                </div>
+            </div>
+            <button class="buy-btn" id="buyBtn">
+                <i class="fas fa-shopping-cart"></i>
+                BAYAR SEKARANG
+            </button>
+        </section>
+    </div>
+
+    <!-- Modal Success -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>Pesanan Berhasil!</h3>
+            <p>Diamond akan masuk dalam 1-5 menit</p>
+            <button class="modal-btn" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
